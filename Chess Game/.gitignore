@@ -1,0 +1,9 @@
+# Ignore Visual Studio build folders
+x64/
+Debug/
+Release/
+
+# Ignore VS Code workspace settings (optional, but recommended)
+.vscode/
+# Ignore Visual Studio hidden folder
+.vs/
