@@ -1,5 +1,7 @@
-#ifndef PIECE-H
-#define PIECE-H
+#ifndef PIECE_H
+#define PIECE_H
+
+class Board;
 
 class Piece {
 protected:
@@ -8,7 +10,8 @@ protected:
 
 public:
     Piece(bool isWhite);
-    virtual bool isValidMove(int x1, int y1, int x2, int y2) = 0;
+    virtual ~Piece() = default;
+    virtual bool isValidMove(int x1, int y1, int x2, int y2, Board* board) = 0;
     char getSymbol();
     bool getColor();
 };

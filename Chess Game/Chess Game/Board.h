@@ -1,5 +1,5 @@
-#ifndef BOARD-H
-#define BOARD-H
+#ifndef BOARD_H
+#define BOARD_H
 #include "Piece.h"
 
 class Board {
