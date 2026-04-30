@@ -1,12 +1,2 @@
-﻿  Bishop.cpp
-  Board.cpp
-  Game.cpp
-  King.cpp
-  Knight.cpp
-  main.cpp
-  Pawn.cpp
-  Piece.cpp
-  Queen.cpp
-  Rook.cpp
-  Generating Code...
+﻿  Board.cpp
   Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe

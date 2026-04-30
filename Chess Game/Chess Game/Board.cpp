@@ -6,7 +6,7 @@ using namespace std;
 Board::Board() {
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
-      grid[i][j] = nullptr;
+        grid[i][j] = nullptr;
     }
   }
 }
@@ -24,12 +24,24 @@ void Board::initialize() {
 }
 
 void Board::display() {
-  for (int i = 0; i < 8; i++) {
-    for (int j = 0; j < 8; j++) {
-      if (grid[i][j] == nullptr)
-        cout << ". ";
+  for (int i = 0; i < 9; i++) {
+      if (i == 8)
+      {
+          cout << "   |";
+      }
       else
-        cout << grid[i][j]->getSymbol() << " ";
+      {
+          cout << " " << i + 1 << " |"; // Count rows from 1 to 8 for user-friendly display
+      }
+    for (int j = 0; j < 8; j++) {
+        if (i == 8)
+        {
+            cout << " " << j + 1 << " |"; // Count columns from 1 to 8 for user-friendly display
+        }
+      else if (grid[i][j] == nullptr)
+        cout << " . |";
+      else
+        cout << " " << grid[i][j]->getSymbol() << " |";
     }
     cout << endl;
   }
