@@ -24,26 +24,37 @@ void Board::initialize() {
 }
 
 void Board::display() {
+
+    // Top border
+    for (int k = 0; k < 9; k++) {
+        cout << "---+";
+    }
+    cout << "\n";
+
   for (int i = 0; i < 9; i++) {
-      if (i == 8)
-      {
-          cout << "   |";
-      }
-      else
-      {
+
+	  if (i == 8) { cout << "   |"; }  // Print column numbers at the bottom
+      else {
           cout << " " << i + 1 << " |"; // Count rows from 1 to 8 for user-friendly display
       }
+
     for (int j = 0; j < 8; j++) {
         if (i == 8)
         {
             cout << " " << j + 1 << " |"; // Count columns from 1 to 8 for user-friendly display
         }
       else if (grid[i][j] == nullptr)
-        cout << " . |";
+			cout << " . |"; // Empty square
       else
-        cout << " " << grid[i][j]->getSymbol() << " |";
+			cout << " " << grid[i][j]->getSymbol() << " |"; // Print piece symbol
     }
     cout << endl;
+
+    // Horizontal separator after every row
+    for (int k = 0; k < 9; k++)
+        cout << "---+";
+    cout << "\n";
+
   }
 }
 
