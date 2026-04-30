@@ -20,3 +20,8 @@ void Game::startGame() {
     }
   }
 }
+
+void Game::switchTurn() {
+  whiteTurn = !whiteTurn;
+}
+

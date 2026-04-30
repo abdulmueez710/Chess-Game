@@ -1,8 +1,37 @@
-//#include "Bishop.h"
-//
-//Bishop::Bishop(bool isWhite) : Piece(isWhite) {}
-//
-//bool Bishop::isValidMove(int x1, int y1, int x2, int y2)
-//{
-//	// Movment Logic here
-//}
+#include "Bishop.h"
+#include "Board.h"
+
+Bishop::Bishop(bool isWhite) : Piece(isWhite) 
+{
+	symbol = isWhite ? 'B' : 'b';
+}
+
+bool Bishop::isValidMove(int x1, int y1, int x2, int y2, Board* board)
+{
+
+	// Movement logic for Bishop
+	if ((x2 - x1) != (y2 - y1)) {
+		return false; // Not a diagonal move
+	}
+
+	int xDirection = (x2 - x1) > 0 ? 1 : -1;
+	int yDirection = (y2 - y1) > 0 ? 1 : -1;
+
+	int x = x1 + xDirection;
+	int y = y1 + yDirection;
+
+	while (x != x2 && y != y2) {
+		if (board->getPiece(x, y) != nullptr) {
+			return false; // Path is blocked
+		}
+		x += xDirection;
+		y += yDirection;
+	}
+
+	Piece* target = board->getPiece(x2, y2);
+	if (target != nullptr && target->getColor() == isWhite) {
+		return false; // Can't capture own piece
+	}
+
+	return true;
+}

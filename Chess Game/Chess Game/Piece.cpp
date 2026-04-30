@@ -3,7 +3,7 @@
 Piece::Piece(bool isWhite)
 {
 	this->isWhite = isWhite;
-	this->symbol = ' '; // Initialize to fix C26495 warning
+	this->symbol = ' '; // Initialize to fix warning
 }
 
 char Piece::getSymbol()

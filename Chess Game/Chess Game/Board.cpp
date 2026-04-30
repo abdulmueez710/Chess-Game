@@ -1,5 +1,6 @@
 #include "Board.h"
 #include "Pawn.h"
+#include "Bishop.h"
 #include <iostream>
 using namespace std;
 
@@ -12,15 +13,22 @@ Board::Board() {
 }
 
 void Board::initialize() {
-  // White Pawns
+
+    // --- Pawn ---
   for (int j = 0; j < 8; j++) {
     grid[6][j] = new Pawn(true);
-  }
-
-  // Black Pawns
-  for (int j = 0; j < 8; j++) {
     grid[1][j] = new Pawn(false);
   }
+
+   // --- Bishop ---
+  for (int j = 0; j < 8; j++)
+  {
+      if (j == 2 || j == 5) {
+          grid[0][j] = new Bishop(false);
+          grid[7][j] = new Bishop(true);
+      }
+  }
+
 }
 
 void Board::display() {
@@ -87,7 +95,7 @@ bool Board::movePiece(int x1, int y1, int x2, int y2) {
   return true;
 }
 
-bool Board::isInside(int x, int y) {
+bool Board::isInside(int x, int y) {  // Check if coordinates are within the 8x8 board
   return (x >= 0 && x < 8 && y >= 0 && y < 8);
 }
 
