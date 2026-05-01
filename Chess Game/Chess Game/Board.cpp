@@ -40,15 +40,13 @@ void Board::display() {
     cout << "\n";
 
   for (int i = 0; i < 9; i++) {
-
 	  if (i == 8) { cout << "   |"; }  // Print column numbers at the bottom
       else {
           cout << " " << i + 1 << " |"; // Count rows from 1 to 8 for user-friendly display
       }
 
     for (int j = 0; j < 8; j++) {
-        if (i == 8)
-        {
+        if (i == 8) {
             cout << " " << j + 1 << " |"; // Count columns from 1 to 8 for user-friendly display
         }
       else if (grid[i][j] == nullptr)
@@ -66,14 +64,15 @@ void Board::display() {
   }
 }
 
-bool Board::movePiece(int x1, int y1, int x2, int y2) {
-  if (!isInside(x1, y1) || !isInside(x2, y2))
-    return false;
+bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
+	if (!isInside(x1, y1) || !isInside(x2, y2)) { return false; }  // Check if coordinates are within the board
 
   Piece *p = grid[x1][y1];
 
-  if (p == nullptr)
-    return false;
+  if (p == nullptr) { return false; }
+
+  // Ensure the piece belongs to the current player
+  if (p->getColor() != whiteTurn) { return false; }
 
   Piece *target = grid[x2][y2];
 
@@ -96,7 +95,10 @@ bool Board::movePiece(int x1, int y1, int x2, int y2) {
 }
 
 bool Board::isInside(int x, int y) {  // Check if coordinates are within the 8x8 board
-  return (x >= 0 && x < 8 && y >= 0 && y < 8);
+    if (x >= 0 && x < 8 && y >= 0 && y < 8)
+        return true;
+    else
+        return false;
 }
 
-Piece *Board::getPiece(int x, int y) { return grid[x][y]; }
+Piece* Board::getPiece(int x, int y) { return grid[x][y]; }

@@ -8,10 +8,12 @@ Pawn::Pawn(bool isWhite) : Piece(isWhite)
 
 bool Pawn::isValidMove(int x1, int y1, int x2, int y2, Board* board)
 {
+    // White pawns move up (decreasing row), Black pawns move down (increasing row)
     int direction = isWhite ? -1 : 1;
 
-    // Moving straight forward
+    // Moving straight forward (same column)
     if (y1 == y2) {
+
         // Move 1 step
         if (x2 == x1 + direction && board->getPiece(x2, y2) == nullptr) {
             return true;
@@ -24,7 +26,7 @@ bool Pawn::isValidMove(int x1, int y1, int x2, int y2, Board* board)
             return true;
         }
     }
-    // Diagonal Capture
+    // Diagonal Capture (one column left or right, one row forward)
     else if ((y2 == y1 + 1 || y2 == y1 - 1) && x2 == x1 + direction) {
         Piece* target = board->getPiece(x2, y2);
         if (target != nullptr && target->getColor() != isWhite) {
