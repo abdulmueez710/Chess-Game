@@ -1,8 +1,8 @@
-//#include "Knight.h"
+// #include "Knight.h"
 //
-//Knight::Knight(bool isWhite) : Piece(isWhite) {}
+// Knight::Knight(bool isWhite) : Piece(isWhite) {}
 //
-//bool Knight::isValidMove(int x1, int y1, int x2, int y2)
+// bool Knight::isValidMove(int x1, int y1, int x2, int y2)
 //{
 //	// Movment Logic here
-//}
+// }

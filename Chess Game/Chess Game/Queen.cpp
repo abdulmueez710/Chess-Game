@@ -1,8 +1,8 @@
-//#include "Queen.h"
+// #include "Queen.h"
 //
-//Queen::Queen(bool isWhite) : Piece(isWhite) {}
+// Queen::Queen(bool isWhite) : Piece(isWhite) {}
 //
-//bool Queen::isValidMove(int x1, int y1, int x2, int y2)
+// bool Queen::isValidMove(int x1, int y1, int x2, int y2)
 //{
 //	// Movment Logic here
-//}
+// }
