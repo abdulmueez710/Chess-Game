@@ -1,3 +1,4 @@
+
 // #include "Knight.h"
 //
 // Knight::Knight(bool isWhite) : Piece(isWhite) {}
@@ -6,3 +7,4 @@
 //{
 //	// Movment Logic here
 // }
+//knight main banaun ga
