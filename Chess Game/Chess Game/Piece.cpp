@@ -14,6 +14,3 @@ bool Piece::getColor()
 {
 	return isWhite;
 }
-virtual Piece :: ~Piece(){
-	
-}
