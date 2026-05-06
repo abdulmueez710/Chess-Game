@@ -1,6 +1,8 @@
 #include "Board.h"
 #include "Bishop.h"
 #include "Pawn.h"
+#include "Knight.h"
+#include "Rook.h"
 #include <iostream>
 
 using namespace std;
@@ -27,6 +29,22 @@ void Board::initialize() {
       grid[0][j] = new Bishop(false);
       grid[7][j] = new Bishop(true);
     }
+  }
+
+  // ---Knight ---
+  for (int j = 0; j < 8; j++) {
+      if (j == 1 || j == 6) {
+          grid[0][j] = new Knight(false);
+          grid[7][j] = new Knight(true);
+      }
+  }
+
+  // ---Rook ---
+  for (int j = 0; j < 8; j++) {
+      if (j == 0 || j == 7) {
+          grid[0][j] = new Rook(false);
+          grid[7][j] = new Rook(true);
+      }
   }
 }
 
