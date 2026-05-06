@@ -1,4 +1,5 @@
 #include "Board.h"
+#include "King.h"
 #include "Bishop.h"
 #include "Pawn.h"
 #include <iostream>
@@ -26,6 +27,14 @@ void Board::initialize() {
     if (j == 2 || j == 5) {
       grid[0][j] = new Bishop(false);
       grid[7][j] = new Bishop(true);
+    }
+  }
+
+  // ==== King on Board ====
+  for(int i = 0; i < 8; i++){
+    if(i == 4){
+      grid[0][j] = new King(false);
+      grid[7][j] = new King(true);
     }
   }
 }
