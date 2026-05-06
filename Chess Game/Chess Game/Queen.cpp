@@ -30,5 +30,9 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			x += X_step;
 			y += Y_step;
 		}
+
+		if(target == nullptr || target->getPiece() != isWhite){
+			return true;
+		}
 	}
 }
