@@ -35,4 +35,7 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			return true;
 		}
 	}
+	if (abs(rowDifference) == abs(colDifference)){
+		
+	}
 }
