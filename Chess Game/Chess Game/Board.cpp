@@ -33,8 +33,8 @@ void Board::initialize() {
   // ==== King on Board ====
   for(int i = 0; i < 8; i++){
     if(i == 4){
-      grid[0][j] = new King(false);
       grid[7][j] = new King(true);
+      grid[0][j] = new King(false);
     }
   }
 }
