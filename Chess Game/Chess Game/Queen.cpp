@@ -36,6 +36,18 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 		}
 	}
 	if (abs(rowDifference) == abs(colDifference)){
-		
+		int X_step = (rowDifference > 0) ? 1 : -1;
+		int Y_step = (colDifference > 0) ? 1 : -1;
+
+		int x = x1 + X_step;
+		int y = y1 + Y_step;
+
+		while(x != x2 && y != y2){
+			if(board->getPiece(x, y) != nullptr){
+				return false;
+			}
+			x += X_step;
+			y += Y_step;
+		}
 	}
 }
