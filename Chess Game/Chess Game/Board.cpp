@@ -1,4 +1,6 @@
 #include "Board.h"
+#include "King.h"
+#include "Queen.h"
 #include "Bishop.h"
 #include "Pawn.h"
 #include "Knight.h"
@@ -13,17 +15,19 @@ Board::Board() {
       grid[i][j] = nullptr;
     }
   }
+  enPassantRow = -1;
+  enPassantCol = -1;
 }
 
 void Board::initialize() {
 
-  // --- Pawn ---
+  //     Pawn    
   for (int j = 0; j < 8; j++) {
     grid[6][j] = new Pawn(true);
     grid[1][j] = new Pawn(false);
   }
 
-  // --- Bishop ---
+  //     Bishop 
   for (int j = 0; j < 8; j++) {
     if (j == 2 || j == 5) {
       grid[0][j] = new Bishop(false);
@@ -31,6 +35,7 @@ void Board::initialize() {
     }
   }
 
+<<<<<<< HEAD
   // ---Knight ---
   for (int j = 0; j < 8; j++) {
       if (j == 1 || j == 6) {
@@ -45,42 +50,82 @@ void Board::initialize() {
           grid[0][j] = new Rook(false);
           grid[7][j] = new Rook(true);
       }
+=======
+  //      King on Board
+  for(int i = 0; i < 8; i++){
+    if(i == 4){
+      grid[7][i] = new King(true);
+      grid[0][i] = new King(false);
+    }
+  }
+
+  //       Queen display on board
+  for(int i = 0; i < 8; i++) {
+    if(i == 3){
+      grid[0][i] = new Queen(false);
+      grid[7][i] = new Queen(true);
+    }
+>>>>>>> b7376ef1456c468acbe03f418e48ea5386e84301
   }
 }
 
 void Board::display() {
-
-  // Top border
-  for (int k = 0; k < 9; k++) {
-    cout << "---+";
-  }
-  cout << "\n";
-
-  for (int i = 0; i < 9; i++) {
-    if (i == 8) {
-      cout << "   |";
-    } // Print column numbers at the bottom
-    else {
-      cout << " " << i + 1
-           << " |"; // Count rows from 1 to 8 for user-friendly display
-    }
-
+    // 1. Column Labels (a b c...) at the TOP (optional, but looks professional)
+    cout << "     "; // Offset for row numbers
     for (int j = 0; j < 8; j++) {
-      if (i == 8) {
-        cout << " " << j + 1
-             << " |"; // Count columns from 1 to 8 for user-friendly display
-      } else if (grid[i][j] == nullptr)
-        cout << " . |"; // Empty square
-      else
-        cout << " " << grid[i][j]->getSymbol() << " |"; // Print piece symbol
-    }
-    cout << endl;
-
-    // Horizontal separator after every row
-    for (int k = 0; k < 9; k++)
-      cout << "---+";
+        if(j == 0){
+          cout << " " << char(j + 97) << " ";
+        }
+        else{
+          cout << "  " << char(j + 97) << " ";
+        }
+    } 
     cout << "\n";
-  }
+
+    for (int i = 0; i < 8; i++) {
+        // 2. Top border for the squares ONLY
+        cout << "    "; // Offset
+        for (int k = 0; k < 8; k++){
+          if(k == 0){
+            cout << "----+";
+          }
+          else
+            cout << "---+";
+        }
+        cout << "\n";
+
+        // 3. Row number on the left (No bar before it)
+        cout << " " << (8 - i) << "  |"; 
+
+        // 4. The actual pieces/squares
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] == nullptr)
+                cout << " . |";
+            else
+                cout << " " << grid[i][j]->getSymbol() << " |";
+        }
+        cout << " " << (8 - i); // Optional: Row number on the right side too
+        cout << "\n";
+    }
+
+    // 5. Final bottom border for the squares
+    cout << "    ";
+    for (int k = 0; k < 8; k++){
+      if(k == 0){
+        cout << "----+";
+      }
+      else{
+        cout << "---+";
+      }
+    }
+    cout << "\n";
+
+    // 6. Column Labels at the BOTTOM
+    cout << "    ";
+    for (int j = 0; j < 8; j++) {
+        cout << "  " << char(j + 97) << " ";
+    }
+    cout << "\n";
 }
 
 bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
@@ -108,6 +153,13 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
   if (!p->isValidMove(x1, y1, x2, y2, this))
     return false;
 
+  // En passant: the target square is empty, so remove the captured pawn beside the moving pawn
+  if (target == nullptr && x2 == enPassantRow && y2 == enPassantCol) {
+    int capturedPawnRow = x1; // The captured pawn sits on the same row as the moving pawn
+    delete grid[capturedPawnRow][y2];
+    grid[capturedPawnRow][y2] = nullptr;
+  }
+
   // Move piece
   if (target != nullptr) {
     delete target; // Clean up captured memory
@@ -116,11 +168,24 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
   grid[x2][y2] = p;
   grid[x1][y1] = nullptr;
 
+  // Update en passant target: set if pawn just double-stepped, clear otherwise
+  if (p->getSymbol() == 'P' || p->getSymbol() == 'p') {
+    if (abs(x2 - x1) == 2) {
+      enPassantRow = (x1 + x2) / 2; // The skipped square
+      enPassantCol = y1;
+    } else {
+      enPassantRow = -1;
+      enPassantCol = -1;
+    }
+  } else {
+    enPassantRow = -1;
+    enPassantCol = -1;
+  }
+
   return true;
 }
 
-bool Board::isInside(int x,
-                     int y) { // Check if coordinates are within the 8x8 board
+bool Board::isInside(int x, int y) { // Check if coordinates are within the 8x8 board
   if (x >= 0 && x < 8 && y >= 0 && y < 8)
     return true;
   else

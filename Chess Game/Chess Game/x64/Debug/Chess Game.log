@@ -1,2 +1,14 @@
+<<<<<<< HEAD
 ﻿  Rook.cpp
   Chess Game.vcxproj -> C:\Users\WAHEED\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
+=======
+﻿  Bishop.cpp
+  Board.cpp
+  Game.cpp
+  King.cpp
+  Pawn.cpp
+  Queen.cpp
+  main.cpp
+  Generating Code...
+  Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
+>>>>>>> b7376ef1456c468acbe03f418e48ea5386e84301

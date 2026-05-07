@@ -7,6 +7,10 @@ private:
   Piece *grid[8][8];
 
 public:
+  // En passant: row/col of the square a pawn can be captured on (-1 if none)
+  int enPassantRow;
+  int enPassantCol;
+
   Board();
   void initialize();
   void display();

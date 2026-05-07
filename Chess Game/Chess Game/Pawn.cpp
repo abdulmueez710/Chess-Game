@@ -32,7 +32,10 @@ bool Pawn::isValidMove(int x1, int y1, int x2, int y2, Board *board) {
     if (target != nullptr && target->getColor() != isWhite) {
       return true;
     }
-    // TODO: Implement en passant capture rule here
+    // En passant: destination is the square the opponent's pawn skipped last turn
+    if (x2 == board->enPassantRow && y2 == board->enPassantCol) {
+      return true;
+    }
   }
 
   // TODO: Pawn promotion should be handled in Board::movePiece after a
