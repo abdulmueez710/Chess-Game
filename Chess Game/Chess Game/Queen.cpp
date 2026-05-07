@@ -1,4 +1,5 @@
 #include "Queen.h"
+#include "Board.h"
 
 Queen::Queen(bool isWhite) : Piece(isWhite) {
   symbol = isWhite ? 'Q' : 'q';
@@ -49,5 +50,10 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			x += X_step;
 			y += Y_step;
 		}
+
+		if (target = nullptr || target->getColor() != isWhite){
+			return true;
+		}
 	}
+	return false;
 }
