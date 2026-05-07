@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -47,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -65,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Rook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Rook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|solutionrelative:Chess Game\\Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E5CC9C2-9DEC-4196-9188-BB2F2402F8FD}|Chess Game\\Chess Game.vcxproj|C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Rook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -86,100 +86,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 12,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp",
-              "RelativeDocumentMoniker": "Chess Game\\main.cpp",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp",
-              "RelativeToolTip": "Chess Game\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-28T13:24:47.848Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.cpp",
-              "RelativeDocumentMoniker": "Chess Game\\Game.cpp",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.cpp",
-              "RelativeToolTip": "Chess Game\\Game.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-28T06:18:42.389Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Game.h",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.h",
-              "RelativeDocumentMoniker": "Chess Game\\Game.h",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.h",
-              "RelativeToolTip": "Chess Game\\Game.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-28T06:18:28.351Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Board.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
-              "RelativeDocumentMoniker": "Chess Game\\Board.cpp",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
-              "RelativeToolTip": "Chess Game\\Board.cpp",
-              "ViewState": "AgIAADUAAAAAAAAAAAAqwD8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-25T06:03:30.49Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Board.h",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.h",
-              "RelativeDocumentMoniker": "Chess Game\\Board.h",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.h",
-              "RelativeToolTip": "Chess Game\\Board.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-25T06:01:18.147Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Piece.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp",
-              "RelativeDocumentMoniker": "Chess Game\\Piece.cpp",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp",
-              "RelativeToolTip": "Chess Game\\Piece.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-28T06:04:05.361Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Piece.h",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.h",
-              "RelativeDocumentMoniker": "Chess Game\\Piece.h",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.h",
-              "RelativeToolTip": "Chess Game\\Piece.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-28T06:04:07.768Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -194,7 +102,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp",
+              "RelativeDocumentMoniker": "Chess Game\\main.cpp",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\main.cpp",
+              "RelativeToolTip": "Chess Game\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-28T13:24:47.848Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.cpp",
+              "RelativeDocumentMoniker": "Chess Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.cpp",
+              "RelativeToolTip": "Chess Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-28T06:18:42.389Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.h",
+              "RelativeDocumentMoniker": "Chess Game\\Game.h",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Game.h",
+              "RelativeToolTip": "Chess Game\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-28T06:18:28.351Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Board.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
+              "RelativeDocumentMoniker": "Chess Game\\Board.cpp",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
+              "RelativeToolTip": "Chess Game\\Board.cpp",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAqwD8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-25T06:03:30.49Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Board.h",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.h",
+              "RelativeDocumentMoniker": "Chess Game\\Board.h",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.h",
+              "RelativeToolTip": "Chess Game\\Board.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-25T06:01:18.147Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Piece.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp",
+              "RelativeDocumentMoniker": "Chess Game\\Piece.cpp",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.cpp",
+              "RelativeToolTip": "Chess Game\\Piece.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-28T06:04:05.361Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Piece.h",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.h",
+              "RelativeDocumentMoniker": "Chess Game\\Piece.h",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Piece.h",
+              "RelativeToolTip": "Chess Game\\Piece.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-28T06:04:07.768Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Bishop.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Bishop.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Bishop.cpp",
@@ -206,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Bishop.h",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Bishop.h",
               "RelativeDocumentMoniker": "Chess Game\\Bishop.h",
@@ -218,19 +218,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
               "Title": "Pawn.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Pawn.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Pawn.cpp",
               "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Pawn.cpp",
               "RelativeToolTip": "Chess Game\\Pawn.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-25T05:36:00.604Z"
+              "WhenOpened": "2026-04-25T05:36:00.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Pawn.h",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Pawn.h",
               "RelativeDocumentMoniker": "Chess Game\\Pawn.h",
@@ -242,19 +243,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "King.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\King.cpp",
               "RelativeDocumentMoniker": "Chess Game\\King.cpp",
               "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\King.cpp",
               "RelativeToolTip": "Chess Game\\King.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-25T05:59:32.335Z"
+              "WhenOpened": "2026-04-25T05:59:32.335Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "King.h",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\King.h",
               "RelativeDocumentMoniker": "Chess Game\\King.h",
@@ -266,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Queen.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Queen.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Queen.cpp",
@@ -278,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Queen.h",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Queen.h",
               "RelativeDocumentMoniker": "Chess Game\\Queen.h",
@@ -290,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Knight.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Knight.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Knight.cpp",
@@ -314,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Rook.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Rook.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Rook.cpp",

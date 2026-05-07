@@ -13,6 +13,8 @@ Board::Board() {
       grid[i][j] = nullptr;
     }
   }
+  enPassantRow = -1;
+  enPassantCol = -1;
 }
 
 void Board::initialize() {
@@ -132,6 +134,13 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
   if (!p->isValidMove(x1, y1, x2, y2, this))
     return false;
 
+  // En passant: the target square is empty, so remove the captured pawn beside the moving pawn
+  if (target == nullptr && x2 == enPassantRow && y2 == enPassantCol) {
+    int capturedPawnRow = x1; // The captured pawn sits on the same row as the moving pawn
+    delete grid[capturedPawnRow][y2];
+    grid[capturedPawnRow][y2] = nullptr;
+  }
+
   // Move piece
   if (target != nullptr) {
     delete target; // Clean up captured memory
@@ -139,6 +148,20 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
 
   grid[x2][y2] = p;
   grid[x1][y1] = nullptr;
+
+  // Update en passant target: set if pawn just double-stepped, clear otherwise
+  if (p->getSymbol() == 'P' || p->getSymbol() == 'p') {
+    if (abs(x2 - x1) == 2) {
+      enPassantRow = (x1 + x2) / 2; // The skipped square
+      enPassantCol = y1;
+    } else {
+      enPassantRow = -1;
+      enPassantCol = -1;
+    }
+  } else {
+    enPassantRow = -1;
+    enPassantCol = -1;
+  }
 
   return true;
 }
