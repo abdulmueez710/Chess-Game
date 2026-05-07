@@ -61,7 +61,7 @@ void Board::display() {
       cout << "   |";
     } // Print column numbers at the bottom
     else {
-      cout << " " << i + 1
+      cout << " " << char(i + 1 + 96);
            << " |"; // Count rows from 1 to 8 for user-friendly display
     }
 
