@@ -8,7 +8,7 @@ Queen::Queen(bool isWhite) : Piece(isWhite) {
 bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 {
 	int rowDifference = x2 - x1;
-	int coldifference = y2 - y1;
+	int colDifference = y2 - y1;
 
 	// Prevent from staying in the same position
 	if(rowDifference == 0 && colDifference == 0){
