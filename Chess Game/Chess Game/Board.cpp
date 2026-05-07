@@ -49,38 +49,62 @@ void Board::initialize() {
 }
 
 void Board::display() {
-
-  // Top border
-  for (int k = 0; k < 9; k++) {
-    cout << "---+";
-  }
-  cout << "\n";
-
-  for (int i = 8; i > 0; i++) {
-    if (i == 8) {
-      cout << "   |";
-    } // Print column numbers at the bottom
-    else {
-        cout << " " << i 
-            << " |"; // Count rows from 1 to 8 for user-friendly display
-    }
-
+    // 1. Column Labels (a b c...) at the TOP (optional, but looks professional)
+    cout << "     "; // Offset for row numbers
     for (int j = 0; j < 8; j++) {
-      if (i == 8) {
-        cout << " " << char(j + 1 + 96)
-             << " |"; // Count columns from 1 to 8 for user-friendly display
-      } else if (grid[i][j] == nullptr)
-        cout << " . |"; // Empty square
-      else
-        cout << " " << grid[i][j]->getSymbol() << " |"; // Print piece symbol
-    }
-    cout << endl;
-
-    // Horizontal separator after every row
-    for (int k = 0; k < 9; k++)
-      cout << "---+";
+        if(j == 0){
+          cout << " " << char(j + 97) << " ";
+        }
+        else{
+          cout << "  " << char(j + 97) << " ";
+        }
+    } 
     cout << "\n";
-  }
+
+    for (int i = 0; i < 8; i++) {
+        // 2. Top border for the squares ONLY
+        cout << "    "; // Offset
+        for (int k = 0; k < 8; k++){
+          if(k == 0){
+            cout << "----+";
+          }
+          else
+            cout << "---+";
+        }
+        cout << "\n";
+
+        // 3. Row number on the left (No bar before it)
+        cout << " " << (8 - i) << "  |"; 
+
+        // 4. The actual pieces/squares
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] == nullptr)
+                cout << " . |";
+            else
+                cout << " " << grid[i][j]->getSymbol() << " |";
+        }
+        cout << " " << (8 - i); // Optional: Row number on the right side too
+        cout << "\n";
+    }
+
+    // 5. Final bottom border for the squares
+    cout << "    ";
+    for (int k = 0; k < 8; k++){
+      if(k == 0){
+        cout << "----+";
+      }
+      else{
+        cout << "---+";
+      }
+    }
+    cout << "\n";
+
+    // 6. Column Labels at the BOTTOM
+    cout << "    ";
+    for (int j = 0; j < 8; j++) {
+        cout << "  " << char(j + 97) << " ";
+    }
+    cout << "\n";
 }
 
 bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
