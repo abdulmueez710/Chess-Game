@@ -61,13 +61,13 @@ void Board::display() {
       cout << "   |";
     } // Print column numbers at the bottom
     else {
-      cout << " " << char(i + 1 + 96);
+      cout << " " << j + 1 
            << " |"; // Count rows from 1 to 8 for user-friendly display
     }
 
     for (int j = 0; j < 8; j++) {
       if (i == 8) {
-        cout << " " << j + 1
+        cout << " " << char(j + 1 + 96)
              << " |"; // Count columns from 1 to 8 for user-friendly display
       } else if (grid[i][j] == nullptr)
         cout << " . |"; // Empty square
