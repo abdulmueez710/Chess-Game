@@ -56,12 +56,12 @@ void Board::display() {
   }
   cout << "\n";
 
-  for (int i = 0; i < 9; i++) {
+  for (int i = 8; i > 0; i++) {
     if (i == 8) {
       cout << "   |";
     } // Print column numbers at the bottom
     else {
-        cout << " " << i + 1 
+        cout << " " << i 
             << " |"; // Count rows from 1 to 8 for user-friendly display
     }
 
