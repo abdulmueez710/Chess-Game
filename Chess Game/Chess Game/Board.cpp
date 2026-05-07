@@ -21,54 +21,52 @@ Board::Board() {
 
 void Board::initialize() {
 
-  //     Pawn    
-  for (int j = 0; j < 8; j++) {
-    grid[6][j] = new Pawn(true);
-    grid[1][j] = new Pawn(false);
-  }
-
-  //     Bishop 
-  for (int j = 0; j < 8; j++) {
-    if (j == 2 || j == 5) {
-      grid[0][j] = new Bishop(false);
-      grid[7][j] = new Bishop(true);
+    //     Pawn    
+    for (int j = 0; j < 8; j++) {
+        grid[6][j] = new Pawn(true);
+        grid[1][j] = new Pawn(false);
     }
-  }
 
-<<<<<<< HEAD
-  // ---Knight ---
-  for (int j = 0; j < 8; j++) {
-      if (j == 1 || j == 6) {
-          grid[0][j] = new Knight(false);
-          grid[7][j] = new Knight(true);
-      }
-  }
-
-  // ---Rook ---
-  for (int j = 0; j < 8; j++) {
-      if (j == 0 || j == 7) {
-          grid[0][j] = new Rook(false);
-          grid[7][j] = new Rook(true);
-      }
-=======
-  //      King on Board
-  for(int i = 0; i < 8; i++){
-    if(i == 4){
-      grid[7][i] = new King(true);
-      grid[0][i] = new King(false);
+    //     Bishop 
+    for (int j = 0; j < 8; j++) {
+        if (j == 2 || j == 5) {
+            grid[0][j] = new Bishop(false);
+            grid[7][j] = new Bishop(true);
+        }
     }
-  }
 
-  //       Queen display on board
-  for(int i = 0; i < 8; i++) {
-    if(i == 3){
-      grid[0][i] = new Queen(false);
-      grid[7][i] = new Queen(true);
+    // ---Knight ---
+    for (int j = 0; j < 8; j++) {
+        if (j == 1 || j == 6) {
+            grid[0][j] = new Knight(false);
+            grid[7][j] = new Knight(true);
+        }
     }
->>>>>>> b7376ef1456c468acbe03f418e48ea5386e84301
-  }
+
+    // ---Rook ---
+    for (int j = 0; j < 8; j++) {
+        if (j == 0 || j == 7) {
+            grid[0][j] = new Rook(false);
+            grid[7][j] = new Rook(true);
+        }
+
+        //      King on Board
+        for (int i = 0; i < 8; i++) {
+            if (i == 4) {
+                grid[7][i] = new King(true);
+                grid[0][i] = new King(false);
+            }
+        }
+
+        //       Queen display on board
+        for (int i = 0; i < 8; i++) {
+            if (i == 3) {
+                grid[0][i] = new Queen(false);
+                grid[7][i] = new Queen(true);
+            }
+        }
+    }
 }
-
 void Board::display() {
     // 1. Column Labels (a b c...) at the TOP (optional, but looks professional)
     cout << "     "; // Offset for row numbers
