@@ -8,7 +8,7 @@ Queen::Queen(bool isWhite) : Piece(isWhite) {
 bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 {
 	int rowDifference = x2 - x1;
-	int coldifference = y2 - y1;
+	int colDifference = y2 - y1;
 
 	// Prevent from staying in the same position
 	if(rowDifference == 0 && colDifference == 0){
@@ -32,11 +32,11 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			y += Y_step;
 		}
 
-		if(target == nullptr || target->getPiece() != isWhite){
+		if(target == nullptr || target->getSymbol() != (isWhite ? 'Q' : 'q')){
 			return true;
 		}
 	}
-	if (abs(rowDifference) == abs(colDifference)){
+	if ((rowDifference) == (colDifference)){
 		int X_step = (rowDifference > 0) ? 1 : -1;
 		int Y_step = (colDifference > 0) ? 1 : -1;
 
@@ -51,7 +51,7 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			y += Y_step;
 		}
 
-		if (target = nullptr || target->getColor() != isWhite){
+		if (target == nullptr || target->getColor() != isWhite){
 			return true;
 		}
 	}
