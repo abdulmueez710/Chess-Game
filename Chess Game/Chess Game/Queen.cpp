@@ -15,7 +15,7 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 		return false;
 	}
 
-	Piece * target = board->getPiece(x2, y2);
+	Piece *target = board->getPiece(x2, y2);
 
 	if (rowDifference == 0 || colDifference == 0){
 		int X_step = (rowDifference == 0) ? 0 : (rowDifference > 0 ? 1 : -1);
