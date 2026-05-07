@@ -61,7 +61,7 @@ void Board::display() {
       cout << "   |";
     } // Print column numbers at the bottom
     else {
-      cout << " " << char(i + 1 + 96);
+      cout << " " << char(i + 1 + 96)
            << " |"; // Count rows from 1 to 8 for user-friendly display
     }
 
@@ -119,8 +119,7 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
   return true;
 }
 
-bool Board::isInside(int x,
-                     int y) { // Check if coordinates are within the 8x8 board
+bool Board::isInside(int x, int y) { // Check if coordinates are within the 8x8 board
   if (x >= 0 && x < 8 && y >= 0 && y < 8)
     return true;
   else
