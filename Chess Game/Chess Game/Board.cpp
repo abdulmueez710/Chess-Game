@@ -17,13 +17,13 @@ Board::Board() {
 
 void Board::initialize() {
 
-  // --- Pawn ---
+  //     Pawn    
   for (int j = 0; j < 8; j++) {
     grid[6][j] = new Pawn(true);
     grid[1][j] = new Pawn(false);
   }
 
-  // --- Bishop ---
+  //     Bishop 
   for (int j = 0; j < 8; j++) {
     if (j == 2 || j == 5) {
       grid[0][j] = new Bishop(false);
@@ -31,7 +31,7 @@ void Board::initialize() {
     }
   }
 
-  // ==== King on Board ====
+  //      King on Board
   for(int i = 0; i < 8; i++){
     if(i == 4){
       grid[7][i] = new King(true);
@@ -39,7 +39,7 @@ void Board::initialize() {
     }
   }
 
-  // Queen display on board
+  //       Queen display on board
   for(int i = 0; i < 8; i++) {
     if(i == 3){
       grid[0][i] = new Queen(false);
