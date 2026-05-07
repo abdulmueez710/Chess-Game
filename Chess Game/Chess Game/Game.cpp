@@ -15,11 +15,13 @@ void Game::switchTurn() {
 void Game::takeInput() {
 	cout << "\n";
 	board.display(); // Display the board before taking input
-
-  int x1, y1, x2, y2;
+  char temp1, temp2;
+  int y1, y2;
   cout << "[x = column(horizontal), y = row(vertical)]\n";
-  cout << (whiteTurn ? "White" : "Black") << "'s turn (x1 y1 x2 y2): ";
-  cin >> x1 >> y1 >> x2 >> y2;
+  cout << (whiteTurn ? "White" : "Black") << "'s turn (e4 e2): ";
+  cin >> temp1 >> y1 >> temp2 >> y2;
+  int x1 = temp1 - 'a';
+  int x2 = temp2 - 'a';
 
   // x = horizontal column (bottom numbers), y = vertical row (left numbers)
   // grid[row][col] = grid[y-1][x-1], so swap before passing
