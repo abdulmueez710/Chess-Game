@@ -25,7 +25,7 @@ void Game::takeInput() {
 
   // x = horizontal column (bottom numbers), y = vertical row (left numbers)
   // grid[row][col] = grid[y-1][x-1], so swap before passing
-  if (board.movePiece(y1 - 1, x1 - 1, y2 - 1, x2 - 1, whiteTurn)) { // -1 for synchronyzation with 0-based indexing
+  if (board.movePiece(y1 - 1, x1 , y2 - 1, x2 , whiteTurn)) { // -1 for synchronyzation with 0-based indexing
 	  switchTurn();		// Switch turn only if the move was successful
   } else {
 	cout << "Invalid move. Try again." << endl;
