@@ -1,4 +1,5 @@
 ﻿  Board.cpp
-  Rook.cpp
+  Game.cpp
+  Pawn.cpp
   Generating Code...
   Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe

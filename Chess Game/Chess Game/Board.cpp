@@ -7,6 +7,7 @@
 #include "Rook.h"
 #include <iostream>
 
+
 using namespace std;
 
 Board::Board() {
@@ -177,6 +178,35 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
   } else {
     enPassantRow = -1;
     enPassantCol = -1;
+  }
+
+  // --- Pawn Promotion ---
+  // White pawn reaches row 0, black pawn reaches row 7
+  bool isWhitePawn = (p->getSymbol() == 'P');
+  bool isBlackPawn = (p->getSymbol() == 'p');
+  if ((isWhitePawn && x2 == 0) || (isBlackPawn && x2 == 7)) {
+    char choice = '\0';
+    while (true) {
+      cout << "Pawn promotion! Choose a piece:\n";
+      cout << "  Q = Queen  |  R = Rook  |  B = Bishop  |  N = Knight\n";
+      cout << "Your choice: ";
+      cin >> choice;
+      if (choice >= 'a' && choice <= 'z') choice -= 32; // manual to-uppercase
+      if (choice == 'Q' || choice == 'R' || choice == 'B' || choice == 'N')
+        break;
+      cout << "Invalid choice. Please enter Q, R, B, or N.\n";
+    }
+
+    bool pawnColor = p->getColor(); // true = white, false = black
+    delete grid[x2][y2];            // Remove the pawn from the board
+    grid[x2][y2] = nullptr;
+
+    switch (choice) {
+      case 'Q': grid[x2][y2] = new Queen(pawnColor);  break;
+      case 'R': grid[x2][y2] = new Rook(pawnColor);   break;
+      case 'B': grid[x2][y2] = new Bishop(pawnColor); break;
+      case 'N': grid[x2][y2] = new Knight(pawnColor); break;
+    }
   }
 
   return true;

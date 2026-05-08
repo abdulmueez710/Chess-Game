@@ -4,31 +4,38 @@ using namespace std;
 
 Game::Game() : whiteTurn(true) {}
 
-void Game::startGame() {
-  board.initialize();
-}
+void Game::startGame() { board.initialize(); }
 
-void Game::switchTurn() {
-  whiteTurn = !whiteTurn;
-}
+void Game::switchTurn() { whiteTurn = !whiteTurn; }
 
 void Game::takeInput() {
-	cout << "\n";
-	board.display(); // Display the board before taking input
-  char temp1, temp2;
-  int y1, y2;
-  cout << "[x = column(horizontal), y = row(vertical)]\n";
-  cout << (whiteTurn ? "White" : "Black") << "'s turn (e4 e2): ";
-  cin >> temp1 >> y1 >> temp2 >> y2;
-  int x1 = temp1 - 'a';
-  int x2 = temp2 - 'a';
+  cout << "\n";
+  board.display(); // Display the board before taking input
 
-  // x = horizontal column (bottom numbers), y = vertical row (left numbers)
-  // grid[row][col] = grid[y-1][x-1], so swap before passing
-  if (board.movePiece(y1 - 1, x1 , y2 - 1, x2 , whiteTurn)) { // -1 for synchronyzation with 0-based indexing
-	  switchTurn();		// Switch turn only if the move was successful
+  char col1, col2;  // column letters  (a-h)
+  int rank1, rank2; // rank numbers (1-8, as shown on the board)
+
+  cout << (whiteTurn ? "White" : "Black") << "'s turn (e.g. e2 e4): ";
+  cin >> col1 >> rank1 >> col2 >> rank2;
+
+  // Convert to lowercase in case the user types uppercase letters
+  if (col1 >= 'A' && col1 <= 'Z')
+    col1 += 32;
+  if (col2 >= 'A' && col2 <= 'Z')
+    col2 += 32;
+
+  // Map to 0-based grid indices:
+  //   grid_row = 8 - rank  (rank 8 -> row 0, rank 1 -> row 7)
+  //   grid_col = letter - 'a'  (a -> 0, h -> 7)
+  int row1 = 8 - rank1;
+  int row2 = 8 - rank2;
+  int gridCol1 = col1 - 'a';
+  int gridCol2 = col2 - 'a';
+
+  if (board.movePiece(row1, gridCol1, row2, gridCol2, whiteTurn)) {
+    switchTurn(); // Switch turn only if the move was successful
   } else {
-	cout << "Invalid move. Try again." << endl;
+    cout << "Invalid move. Try again." << endl;
   }
 }
 

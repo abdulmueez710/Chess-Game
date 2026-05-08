@@ -38,9 +38,5 @@ bool Pawn::isValidMove(int x1, int y1, int x2, int y2, Board *board) {
     }
   }
 
-  // TODO: Pawn promotion should be handled in Board::movePiece after a
-  // successful move
-  //       (when a pawn reaches row 0 for white, or row 7 for black).
-
   return false;
 }

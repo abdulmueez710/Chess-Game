@@ -112,8 +112,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-08T04:41:13.299Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -134,8 +133,8 @@
               "Title": "Board.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
               "RelativeDocumentMoniker": "Chess Game\\Board.cpp",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp*",
-              "RelativeToolTip": "Chess Game\\Board.cpp*",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Chess-Game\\Chess Game\\Chess Game\\Board.cpp",
+              "RelativeToolTip": "Chess Game\\Board.cpp",
               "ViewState": "AgIAAI0AAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-08T04:41:13.304Z",
