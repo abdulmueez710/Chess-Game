@@ -1,37 +1,4 @@
-﻿<<<<<<< HEAD
-﻿  Rook.cpp
-  Chess Game.vcxproj -> C:\Users\WAHEED\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
-=======
-﻿  Bishop.cpp
-  Board.cpp
-  Knight.cpp
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(38,1): error C2059: syntax error: '<<'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(40,24): error C2059: syntax error: ';'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(40,31): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(41,29): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(44,7): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(45,3): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(48,24): error C2059: syntax error: ';'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(48,31): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(49,29): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(52,7): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(55,23): error C2059: syntax error: ';'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(55,29): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(56,15): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(59,5): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(60,3): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(63,23): error C2059: syntax error: ';'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(63,30): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(64,15): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(67,5): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(68,1): error C2947: expecting '>' to terminate template-argument-list, found '>>'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(68,3): error C2947: expecting '>' to terminate template-argument-list, found '>>'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(68,5): error C2059: syntax error: '>>'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(70,1): error C2059: syntax error: '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(70,1): error C2143: syntax error: missing ';' before '}'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(72,23): error C2143: syntax error: missing ';' before '{'
-C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(72,23): error C2447: '{': missing function header (old-style formal list?)
+﻿  Board.cpp
   Rook.cpp
   Generating Code...
   Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
->>>>>>> b7376ef1456c468acbe03f418e48ea5386e84301
