@@ -1,4 +1,9 @@
-﻿  Board.cpp
+﻿<<<<<<< HEAD
+﻿  Rook.cpp
+  Chess Game.vcxproj -> C:\Users\WAHEED\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
+=======
+﻿  Bishop.cpp
+  Board.cpp
   Knight.cpp
 C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(38,1): error C2059: syntax error: '<<'
 C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(40,24): error C2059: syntax error: ';'
@@ -28,3 +33,5 @@ C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(72,23): erro
 C:\Users\hp\source\repos\Chess-Game\Chess Game\Chess Game\Board.cpp(72,23): error C2447: '{': missing function header (old-style formal list?)
   Rook.cpp
   Generating Code...
+  Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
+>>>>>>> b7376ef1456c468acbe03f418e48ea5386e84301
