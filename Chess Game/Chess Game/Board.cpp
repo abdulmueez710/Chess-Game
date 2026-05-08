@@ -110,7 +110,7 @@ void Board::display() {
     cout << "    ";
     for (int k = 0; k < 8; k++){
       if(k == 0){
-        cout << "----+";
+        cout << "+---+";
       }
       else{
         cout << "---+";
