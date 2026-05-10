@@ -33,7 +33,7 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			y += Y_step;
 		}
 
-		if(target == nullptr || target->getSymbol() != (isWhite ? 'Q' : 'q')){
+		if(target == nullptr || target->getColor() != isWhite){
 			return true;
 		}
 	}

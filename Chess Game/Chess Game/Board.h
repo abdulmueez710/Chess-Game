@@ -17,6 +17,8 @@ public:
   bool movePiece(int x1, int y1, int x2, int y2, bool whiteTurn);
   bool isInside(int x, int y);
   Piece *getPiece(int x, int y);
+  bool isInCheck(bool white);
+  bool isCheckmate(bool white);
 };
 
 #endif // !BOARD-H
