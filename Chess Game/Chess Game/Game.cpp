@@ -28,6 +28,7 @@ void Game::takeInput() {
     col2 += 32;
   }
 
+  // Changing the index of Baord accordingly
   int Row1 = 8 - row1;
   int Row2 = 8 - row2;
   int Column1 = col1 - 'a';
