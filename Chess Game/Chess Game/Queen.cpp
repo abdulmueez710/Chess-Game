@@ -1,5 +1,6 @@
 #include "Queen.h"
 #include "Board.h"
+#include <cstdlib>
 
 Queen::Queen(bool isWhite) : Piece(isWhite) {
   symbol = isWhite ? 'Q' : 'q';
@@ -36,7 +37,7 @@ bool Queen::isValidMove(int x1, int y1, int x2, int y2, Board *board)
 			return true;
 		}
 	}
-	if ((rowDifference) == (colDifference)){
+	if (abs(rowDifference) == abs(colDifference)){
 		int X_step = (rowDifference > 0) ? 1 : -1;
 		int Y_step = (colDifference > 0) ? 1 : -1;
 
