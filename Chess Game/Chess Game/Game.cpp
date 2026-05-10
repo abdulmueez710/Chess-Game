@@ -18,13 +18,22 @@ void Game::takeInput() {
   int row1, row2; // rank numbers (1-8, as shown on the board)
 
   cout << (whiteTurn ? "White" : "Black") << "'s turn (eg. e2 e4): ";
-  cin >> col1 >> row1 >> col2 >> row2;
+  cin >> col1;
+
+  if(col1 == 'q' || col1 == 'Q'){
+    cout << "\n\n               Game Ended\n";
+    cout << "\n     Thank you for Playing Our Chess Game\n\n";
+
+    exit(0);
+  }
+
+  cin >> row1 >> col2 >> row2;
 
   // Convert to lowercase in case the user types uppercase letters
-  if (col1 >= 'A' && col1 <= 'Z'){
+  if (col1 >= 'A' && col1 <= 'H'){
     col1 = char(col1 + 32);
   }
-  if (col2 >= 'A' && col2 <= 'Z'){
+  if (col2 >= 'A' && col2 <= 'H'){
     col2 = char(col2 + 32);
   }
 
