@@ -17,15 +17,15 @@ void Game::takeInput() {
   char col1, col2;  // column letters  (a-h)
   int row1, row2; // rank numbers (1-8, as shown on the board)
 
-  cout << (whiteTurn ? "White" : "Black") << "'s turn (e.g e2 e4): ";
+  cout << (whiteTurn ? "White" : "Black") << "'s turn (eg. e2 e4): ";
   cin >> col1 >> row1 >> col2 >> row2;
 
   // Convert to lowercase in case the user types uppercase letters
   if (col1 >= 'A' && col1 <= 'Z'){
-    col1 += 32;
+    col1 = char(col1 + 32);
   }
   if (col2 >= 'A' && col2 <= 'Z'){
-    col2 += 32;
+    col2 = char(col2 + 32);
   }
 
   // Changing the index of Baord accordingly
@@ -34,7 +34,7 @@ void Game::takeInput() {
   int Column1 = col1 - 'a';
   int Column2 = col2 - 'a';
 
-  if (board.movePiece(row1, Column1, row2, Column2, whiteTurn)) {
+  if (board.movePiece(Row1, Column1, Row2, Column2, whiteTurn)) {
     switchTurn(); // Switch turn only if the move was successful
   } else {
     cout << "Invalid move. Try again." << endl;
