@@ -42,6 +42,6 @@ void Game::takeInput() {
 }
 
 bool Game::checkGameEnd() {
-  // Placeholder for game end logic (e.g., checkmate, stalemate)
+  // Placeholder for game end logic (e.g checkmate, stalemate)
   return false;
 }
