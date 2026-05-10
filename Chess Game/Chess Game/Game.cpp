@@ -3,15 +3,17 @@
 #include <iostream>
 using namespace std;
 
-void Game::Menu(){
-  cout << "\n1.  Play Game\n";
-  cout << "2.  Rules and Instructions\n";
-  cout << "3.  Quit\n";
-}
 
 Game::Game() : whiteTurn(true) {}
 
 void Game::startGame() { board.initialize(); }
+
+void Game::Menu(){
+  cout << "1.  Start New Game\n";
+  cout << "2.  Resume Previous Game\n";
+  cout << "3.  Rules and Instructions\n";
+  cout << "4.  Quit\n";
+}
 
 void Game::switchTurn() { 
   whiteTurn = !whiteTurn; 
@@ -27,8 +29,9 @@ void Game::takeInput() {
   cout << (whiteTurn ? "White" : "Black") << "'s turn (eg. e2 e4): ";
   cin >> col1;
 
-  if(col1 == 'q' || col1 == 'Q'){
-    cout << "\n\n               Game Ended\n";
+  if (col1 == 'q' || col1 == 'Q') { // Quit the game on user will
+    saveGame();
+    cout << "\n\n               Game Saved & Ended\n";
     cout << "\n     Thank you for Playing Our Chess Game\n\n";
 
     exit(0);
@@ -65,5 +68,18 @@ void Game::takeInput() {
 bool Game::checkGameEnd() {
     if (board.isCheckmate(false) || board.isCheckmate(true))
         return true;
+    else
+    return false;
+}
+
+void Game::saveGame() {
+    board.saveToFile("chess_save.txt", whiteTurn);
+}
+
+bool Game::loadGame() {
+    if (board.loadFromFile("chess_save.txt", whiteTurn)) {
+        cout << "\nGame loaded successfully!\n";
+        return true;
+    }
     return false;
 }

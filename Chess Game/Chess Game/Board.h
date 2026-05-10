@@ -1,6 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 #include "Piece.h"
+#include <string>
+using namespace std;
 
 class Board {
 private:
@@ -19,6 +21,8 @@ public:
   Piece *getPiece(int x, int y);
   bool isInCheck(bool white);
   bool isCheckmate(bool white);
+  bool saveToFile(const string& filename, bool whiteTurn);
+  bool loadFromFile(const string& filename, bool& whiteTurn);
 };
 
 #endif // !BOARD-H

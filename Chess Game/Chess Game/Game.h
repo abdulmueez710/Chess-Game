@@ -1,10 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
 #include "Board.h"
+#include <string>
+using namespace std;
 
 class Game {
 private:
-    Board board;
+	Board board;  // Composition: Game has a Board
     bool whiteTurn;
 
 public:
@@ -14,6 +16,8 @@ public:
     void switchTurn();
     void takeInput();
     bool checkGameEnd();
+    void saveGame();
+    bool loadGame();
 };
 
 #endif 

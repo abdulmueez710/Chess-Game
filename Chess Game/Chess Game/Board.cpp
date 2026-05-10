@@ -7,6 +7,7 @@
 #include "Knight.h"
 #include "Rook.h"
 #include <iostream>
+#include <fstream>
 
 
 using namespace std;
@@ -23,21 +24,6 @@ Board::Board() {
 
 void Board::initialize() {
 
-    //      King on Board
-      for (int i = 0; i < 8; i++) {
-            if (i == 4) {
-                grid[7][i] = new King(true);
-                grid[0][i] = new King(false);
-            }
-        }
-
-        //       Queen display on board
-      for (int i = 0; i < 8; i++) {
-            if (i == 3) {
-                grid[0][i] = new Queen(false);
-                grid[7][i] = new Queen(true);
-            }
-        }
     //     Pawn    
     for (int j = 0; j < 8; j++) {
         grid[6][j] = new Pawn(true);
@@ -51,6 +37,22 @@ void Board::initialize() {
             grid[7][j] = new Bishop(true);
         }
     }
+
+    //      King on Board
+      for (int i = 0; i < 8; i++) {
+            if (i == 4) {
+                grid[7][i] = new King(true);
+                grid[0][i] = new King(false);
+            }
+        }
+
+        //   Queen display on board
+      for (int i = 0; i < 8; i++) {
+            if (i == 3) {
+                grid[0][i] = new Queen(false);
+                grid[7][i] = new Queen(true);
+            }
+        }
 
     // ---Knight ---
     for (int j = 0; j < 8; j++) {
@@ -69,7 +71,7 @@ void Board::initialize() {
     }
 }
 void Board::display() {
-    // 1. Column Labels (a b c...) at the TOP (optional, but looks professional)
+    // 1. Column Labels 
     cout << "     "; // Offset for row numbers
     for (int j = 0; j < 8; j++) {
         if(j == 0){
@@ -93,7 +95,7 @@ void Board::display() {
         }
         cout << "\n";
 
-        // 3. Row number on the left (No bar before it)
+        // 3. Row number on the left 
         cout << " " << (8 - i) << "  |"; 
 
         // 4. The actual pieces/squares
@@ -103,7 +105,7 @@ void Board::display() {
             else
                 cout << " " << grid[i][j]->getSymbol() << " |";
         }
-        cout << " " << (8 - i); // Optional: Row number on the right side too
+        cout << " " << (8 - i); // Row number on the right side too
         cout << "\n";
     }
 
@@ -294,3 +296,82 @@ bool Board::isCheckmate(bool white) {
 }
 
 Piece *Board::getPiece(int x, int y) { return grid[x][y]; }
+
+bool Board::saveToFile(const string& filename, bool whiteTurn) {
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cout << "Error: Could not save the game." << endl;
+        return false;
+    }
+
+    // First line: whose turn it is (1 = white, 0 = black)
+    file << (whiteTurn ? 1 : 0) << endl;
+
+    // Save the 8x8 grid
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] == nullptr) {
+                file << ".";
+            } else {
+                file << grid[i][j]->getSymbol();
+            }
+        }
+        file << endl;
+    }
+
+    file.close();
+    return true;
+}
+
+bool Board::loadFromFile(const string& filename, bool& whiteTurn) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cout << "Error: No saved game found." << endl;
+        return false;
+    }
+
+    // Read whose turn it is
+    int turn;
+    file >> turn;
+    whiteTurn = (turn == 1);
+
+    // Clear the current board
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] != nullptr) {
+                delete grid[i][j];
+                grid[i][j] = nullptr;
+            }
+        }
+    }
+
+    // Read the 8x8 grid
+    string row;
+    for (int i = 0; i < 8; i++) {
+        file >> row;
+        for (int j = 0; j < 8; j++) {
+            char ch = row[j];
+
+            switch (ch) {
+                case 'P': grid[i][j] = new Pawn(true);    break;
+                case 'p': grid[i][j] = new Pawn(false);   break;
+                case 'R': grid[i][j] = new Rook(true);    break;
+                case 'r': grid[i][j] = new Rook(false);   break;
+                case 'N': grid[i][j] = new Knight(true);   break;
+                case 'n': grid[i][j] = new Knight(false);  break;
+                case 'B': grid[i][j] = new Bishop(true);   break;
+                case 'b': grid[i][j] = new Bishop(false);  break;
+                case 'Q': grid[i][j] = new Queen(true);    break;
+                case 'q': grid[i][j] = new Queen(false);   break;
+                case 'K': grid[i][j] = new King(true);     break;
+                case 'k': grid[i][j] = new King(false);    break;
+                default:  grid[i][j] = nullptr;             break;
+            }
+        }
+    }
+
+    file.close();
+    enPassantRow = -1;
+    enPassantCol = -1;
+    return true;
+}

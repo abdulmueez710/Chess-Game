@@ -16,7 +16,7 @@ public:
   virtual bool isValidMove(int x1, int y1, int x2, int y2, Board *board) = 0;
   char getSymbol();
   bool getColor();
-  virtual ~Piece() = default;
+  virtual ~Piece() = default; // virtual ~Piece() {} --> Same
 };
 
 #endif

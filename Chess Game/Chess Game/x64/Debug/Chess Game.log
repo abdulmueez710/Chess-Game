@@ -1,2 +1,11 @@
-﻿  Board.cpp
-  Chess Game.vcxproj -> C:\Users\WAHEED\Source\Repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe
+﻿  Bishop.cpp
+  Board.cpp
+  Game.cpp
+  King.cpp
+  Knight.cpp
+  Pawn.cpp
+  Queen.cpp
+  Rook.cpp
+  main.cpp
+  Generating Code...
+  Chess Game.vcxproj -> C:\Users\hp\source\repos\Chess-Game\Chess Game\x64\Debug\Chess Game.exe

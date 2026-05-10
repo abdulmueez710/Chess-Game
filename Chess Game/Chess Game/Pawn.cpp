@@ -1,11 +1,13 @@
 #include "Pawn.h"
 #include "Board.h"
 
-Pawn::Pawn(bool isWhite) : Piece(isWhite) { symbol = isWhite ? 'P' : 'p'; }
+Pawn::Pawn(bool isWhite) : Piece(isWhite)
+{
+    symbol = isWhite ? 'P' : 'p';
+}
 
 bool Pawn::isValidMove(int x1, int y1, int x2, int y2, Board *board) {
-  // White pawns move up (decreasing row), Black pawns move down (increasing
-  // row)
+  // White pawns move up (decreasing row), Black pawns move down (increasing row)
   int direction = isWhite ? -1 : 1;
 
   // Moving straight forward (same column)
