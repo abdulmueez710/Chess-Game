@@ -15,4 +15,4 @@ public:
     bool checkGameEnd();
 };
 
-#endif // !GAME-H
+#endif 
