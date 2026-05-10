@@ -22,6 +22,21 @@ Board::Board() {
 
 void Board::initialize() {
 
+    //      King on Board
+      for (int i = 0; i < 8; i++) {
+            if (i == 4) {
+                grid[7][i] = new King(true);
+                grid[0][i] = new King(false);
+            }
+        }
+
+        //       Queen display on board
+      for (int i = 0; i < 8; i++) {
+            if (i == 3) {
+                grid[0][i] = new Queen(false);
+                grid[7][i] = new Queen(true);
+            }
+        }
     //     Pawn    
     for (int j = 0; j < 8; j++) {
         grid[6][j] = new Pawn(true);
@@ -50,21 +65,6 @@ void Board::initialize() {
             grid[0][j] = new Rook(false);
             grid[7][j] = new Rook(true);
         }
-        //      King on Board
-        for (int i = 0; i < 8; i++) {
-            if (i == 4) {
-                grid[7][i] = new King(true);
-                grid[0][i] = new King(false);
-            }
-        }
-
-        //       Queen display on board
-        for (int i = 0; i < 8; i++) {
-            if (i == 3) {
-                grid[0][i] = new Queen(false);
-                grid[7][i] = new Queen(true);
-            }
-        }
     }
 }
 void Board::display() {
@@ -85,7 +85,7 @@ void Board::display() {
         cout << "    "; // Offset
         for (int k = 0; k < 8; k++){
           if(k == 0){
-            cout << "----+";
+            cout << "+---+";
           }
           else
             cout << "---+";
