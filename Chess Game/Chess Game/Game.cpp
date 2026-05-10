@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Board.h"
 #include <iostream>
 using namespace std;
 
@@ -36,12 +37,18 @@ void Game::takeInput() {
 
   if (board.movePiece(Row1, Column1, Row2, Column2, whiteTurn)) {
     switchTurn(); // Switch turn only if the move was successful
+    if (board.isInCheck(whiteTurn))
+        if (board.isCheckmate(whiteTurn))
+            cout << "Checkmate! " << (whiteTurn ? "Black" : "White") << " wins\n";
+        else
+            cout << (whiteTurn ? "White" : "Black") << " is in check!\n";
   } else {
     cout << "Invalid move. Try again." << endl;
   }
 }
 
 bool Game::checkGameEnd() {
-  // Placeholder for game end logic (e.g checkmate, stalemate)
-  return false;
+    if (board.isCheckmate(false) || board.isCheckmate(true))
+        return true;
+    return false;
 }

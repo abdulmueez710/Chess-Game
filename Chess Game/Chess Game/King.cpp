@@ -2,7 +2,7 @@
 #include "Board.h"
 
 King::King(bool isWhite) : Piece(isWhite) { 
-    symbol = isWhite ? 'K' : 'k'; 
+    symbol = isWhite ? 'K' : 'k';
 }
 
 bool King::isValidMove(int x1, int y1, int x2, int y2, Board *board) {

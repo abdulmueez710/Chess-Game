@@ -1,3 +1,4 @@
+#include "Piece.h"
 #include "Board.h"
 #include "King.h"
 #include "Queen.h"
@@ -127,96 +128,169 @@ void Board::display() {
 }
 
 bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
-  if (!isInside(x1, y1) || !isInside(x2, y2)) {
-    return false;
-  } // Check if coordinates are within the board
+    Piece* movingPiece = grid[x1][y1];
+    Piece* capturedPiece = grid[x2][y2];
 
-  Piece *p = grid[x1][y1];
+    if (!isInside(x1, y1) || !isInside(x2, y2)) {
+        return false;
+    } // Check if coordinates are within the board
 
-  if (p == nullptr) {
-    return false;
-  }
+    Piece *p = grid[x1][y1];
 
-  // Ensure the piece belongs to the current player
-  if (p->getColor() != whiteTurn) {
-    return false;
-  }
-
-  Piece *target = grid[x2][y2];
-
-  // Prevent friendly fire entirely for all pieces
-  if (target != nullptr && target->getColor() == p->getColor())
-    return false;
-
-  if (!p->isValidMove(x1, y1, x2, y2, this))
-    return false;
-
-  // En passant: the target square is empty, so remove the captured pawn beside the moving pawn
-  if (target == nullptr && x2 == enPassantRow && y2 == enPassantCol) {
-    int capturedPawnRow = x1; // The captured pawn sits on the same row as the moving pawn
-    delete grid[capturedPawnRow][y2];
-    grid[capturedPawnRow][y2] = nullptr;
-  }
-
-  // Move piece
-  if (target != nullptr) {
-    delete target; // Clean up captured memory
-  }
-
-  grid[x2][y2] = p;
-  grid[x1][y1] = nullptr;
-
-  // Update en passant target: set if pawn just double-stepped, clear otherwise
-  if (p->getSymbol() == 'P' || p->getSymbol() == 'p') {
-    if (abs(x2 - x1) == 2) {
-      enPassantRow = (x1 + x2) / 2; // The skipped square
-      enPassantCol = y1;
-    } else {
-      enPassantRow = -1;
-      enPassantCol = -1;
-    }
-  } else {
-    enPassantRow = -1;
-    enPassantCol = -1;
-  }
-
-  // --- Pawn Promotion ---
-  // White pawn reaches row 0, black pawn reaches row 7
-  bool isWhitePawn = (p->getSymbol() == 'P');
-  bool isBlackPawn = (p->getSymbol() == 'p');
-  if ((isWhitePawn && x2 == 0) || (isBlackPawn && x2 == 7)) {
-    char choice = '\0';
-    while (true) {
-      cout << "Pawn promotion! Choose a piece:\n";
-      cout << "  Q = Queen  |  R = Rook  |  B = Bishop  |  N = Knight\n";
-      cout << "Your choice: ";
-      cin >> choice;
-      if (choice >= 'a' && choice <= 'z') choice -= 32; // manual to-uppercase
-      if (choice == 'Q' || choice == 'R' || choice == 'B' || choice == 'N')
-        break;
-      cout << "Invalid choice. Please enter Q, R, B, or N.\n";
+    if (p == nullptr) {
+         return false;
     }
 
-    bool pawnColor = p->getColor(); // true = white, false = black
-    delete grid[x2][y2];            // Remove the pawn from the board
-    grid[x2][y2] = nullptr;
-
-    switch (choice) {
-      case 'Q': grid[x2][y2] = new Queen(pawnColor);  break;
-      case 'R': grid[x2][y2] = new Rook(pawnColor);   break;
-      case 'B': grid[x2][y2] = new Bishop(pawnColor); break;
-      case 'N': grid[x2][y2] = new Knight(pawnColor); break;
+    // Ensure the piece belongs to the current player
+    if (p->getColor() != whiteTurn) {
+        return false;
     }
-  }
 
-  return true;
+    Piece *target = grid[x2][y2];
+
+    // Prevent friendly fire entirely for all pieces
+    if (target != nullptr && target->getColor() == p->getColor())
+        return false;
+
+    if (!p->isValidMove(x1, y1, x2, y2, this))
+        return false;
+
+    // En passant: the target square is empty, so remove the captured pawn beside the moving pawn
+    if (target == nullptr && x2 == enPassantRow && y2 == enPassantCol) {
+        int capturedPawnRow = x1; // The captured pawn sits on the same row as the moving pawn
+        delete grid[capturedPawnRow][y2];
+        grid[capturedPawnRow][y2] = nullptr;
+    }
+
+    grid[x2][y2] = movingPiece;
+    grid[x1][y1] = nullptr;
+
+    // Check if own king is in check
+    if (isInCheck(whiteTurn)) {
+        grid[x1][y1] = movingPiece;
+        grid[x2][y2] = capturedPiece;
+        return false;
+    }
+
+    // Legal move — now delete captured piece
+    if (capturedPiece != nullptr) {
+        delete capturedPiece;
+    }
+
+    p->setHasMoved(true);
+
+    // Update en passant target: set if pawn just double-stepped, clear otherwise
+    if (p->getSymbol() == 'P' || p->getSymbol() == 'p') {
+        if (abs(x2 - x1) == 2) {
+            enPassantRow = (x1 + x2) / 2; // The skipped square
+            enPassantCol = y1;
+        } 
+        else {
+            enPassantRow = -1;
+            enPassantCol = -1;
+        }
+    } 
+    else {
+        enPassantRow = -1;
+        enPassantCol = -1;
+    }
+
+    // --- Pawn Promotion ---
+    // White pawn reaches row 0, black pawn reaches row 7
+    bool isWhitePawn = (p->getSymbol() == 'P');
+    bool isBlackPawn = (p->getSymbol() == 'p');
+    if ((isWhitePawn && x2 == 0) || (isBlackPawn && x2 == 7)) {
+        char choice = '\0';
+        while (true) {
+            cout << "Pawn promotion! Choose a piece:\n";
+            cout << "  Q = Queen  |  R = Rook  |  B = Bishop  |  N = Knight\n";
+            cout << "Your choice: ";
+            cin >> choice;
+            if (choice >= 'a' && choice <= 'z') choice -= 32; // manual to-uppercase
+            if (choice == 'Q' || choice == 'R' || choice == 'B' || choice == 'N')
+            break;
+            cout << "Invalid choice. Please enter Q, R, B, or N.\n";
+        }
+
+        bool pawnColor = p->getColor(); // true = white, false = black
+        delete grid[x2][y2];            // Remove the pawn from the board
+        grid[x2][y2] = nullptr;
+
+        switch (choice) {
+            case 'Q': grid[x2][y2] = new Queen(pawnColor);  break;
+            case 'R': grid[x2][y2] = new Rook(pawnColor);   break;
+            case 'B': grid[x2][y2] = new Bishop(pawnColor); break;
+            case 'N': grid[x2][y2] = new Knight(pawnColor); break;
+        }
+    }
+
+    return true;
 }
 
 bool Board::isInside(int x, int y) { // Check if coordinates are within the 8x8 board
-  if (x >= 0 && x < 8 && y >= 0 && y < 8)
-    return true;
-  else
+    if (x >= 0 && x < 8 && y >= 0 && y < 8)
+        return true;
+    else
+        return false;
+}
+
+bool Board::isInCheck(bool white) {
+    int kingRow = -1; int kingCol = -1;
+    char kingSymbol = white ? 'K' : 'k';
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] != nullptr && grid[i][j]->getSymbol() == kingSymbol) {
+                kingRow = i; kingCol = j;
+            }
+        }
+    }
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] != nullptr && grid[i][j]->getColor() != white && grid[i][j]->isValidMove(i, j, kingRow, kingCol, this) == true) {
+                return true;
+            }
+        }
+    }
     return false;
+
+}
+
+bool Board::isCheckmate(bool white) {
+    if (!isInCheck(white))
+        return false;
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (grid[i][j] == nullptr || grid[i][j]->getColor() != white)
+                continue;
+
+            Piece* p = grid[i][j];
+
+            for (int k = 0; k < 8; k++) {
+                for (int l = 0; l < 8; l++) {
+                    Piece* target = grid[k][l];
+                    if (target != nullptr && target->getColor() == white)
+                        continue; // friendly fire, skip
+                    if (!p->isValidMove(i, j, k, l, this))
+                        continue; // invalid move, skip
+
+                    // Simulate
+                    grid[k][l] = p;
+                    grid[i][j] = nullptr;
+
+                    bool stillInCheck = isInCheck(white);
+
+                    // Undo
+                    grid[i][j] = p;
+                    grid[k][l] = target;
+
+                    if (!stillInCheck)
+                        return false; // found a legal move, not checkmate
+                }
+            }
+        }
+    }
+    return true; // no legal move found
 }
 
 Piece *Board::getPiece(int x, int y) { return grid[x][y]; }
