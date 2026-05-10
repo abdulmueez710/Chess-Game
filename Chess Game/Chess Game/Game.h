@@ -9,6 +9,7 @@ private:
 
 public:
     Game();
+    void Menu();
     void startGame();
     void switchTurn();
     void takeInput();

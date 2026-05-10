@@ -2,6 +2,12 @@
 #include <iostream>
 using namespace std;
 
+void Game::Menu(){
+  cout << "1.  Play Game\n";
+  cout << "2.  Rules and Instructions\n";
+  cout << "3.  Quit\n";
+}
+
 Game::Game() : whiteTurn(true) {}
 
 void Game::startGame() { board.initialize(); }
