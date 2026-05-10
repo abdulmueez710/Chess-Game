@@ -3,7 +3,7 @@
 using namespace std;
 
 void Game::Menu(){
-  cout << "1.  Play Game\n";
+  cout << "\n1.  Play Game\n";
   cout << "2.  Rules and Instructions\n";
   cout << "3.  Quit\n";
 }
