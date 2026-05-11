@@ -15,6 +15,65 @@ void Game::Menu(){
   cout << "4.  Quit\n";
 }
 
+void Game::instructions(){
+  cout << "==================== CHESS GAME INSTRUCTIONS ====================\n\n";
+
+cout << "1. This is a two-player chess game:\n";
+cout << "   - White moves first\n";
+cout << "   - Players take turns one by one\n\n";
+
+cout << "2. Enter moves in the following format:\n";
+cout << "      e2 e4\n\n";
+
+cout << "   Example:\n";
+cout << "      e2 e4  -> moves piece from e2 to e4\n\n";
+
+cout << "3. Board Coordinates:\n";
+cout << "   - Columns are labeled from a to h\n";
+cout << "   - Rows are labeled from 1 to 8\n\n";
+
+cout << "4. Piece Symbols:\n\n";
+
+cout << "   White Pieces:\n";
+cout << "      K = King\n";
+cout << "      Q = Queen\n";
+cout << "      R = Rook\n";
+cout << "      B = Bishop\n";
+cout << "      N = Knight\n";
+cout << "      P = Pawn\n\n";
+
+cout << "   Black Pieces:\n";
+cout << "      k = King\n";
+cout << "      q = Queen\n";
+cout << "      r = Rook\n";
+cout << "      b = Bishop\n";
+cout << "      n = Knight\n";
+cout << "      p = Pawn\n\n";
+
+cout << "5. Special Rules Included:\n";
+cout << "   - Pawn Promotion\n";
+cout << "   - En Passant\n";
+cout << "   - Check Detection\n";
+cout << "   - Checkmate Detection\n";
+cout << "   - Stalemate Detection\n\n";
+
+cout << "6. Invalid moves are not allowed.\n";
+cout << "   You cannot:\n";
+cout << "   - Move outside the board\n";
+cout << "   - Move opponent's piece\n";
+cout << "   - Capture your own piece\n";
+cout << "   - Leave your king in check\n\n";
+
+cout << "7. To quit the game at any time, type:\n";
+cout << "      quit\n\n";
+
+cout << "8. Game End Conditions:\n";
+cout << "   - Checkmate  -> One player wins\n";
+cout << "   - Stalemate  -> Match draw\n\n";
+
+cout << "=================================================================\n";
+}
+
 void Game::switchTurn() { 
   whiteTurn = !whiteTurn; 
 }

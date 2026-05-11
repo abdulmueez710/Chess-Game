@@ -31,7 +31,7 @@ int main() {
         }
       }
     } else if (choice == 3) {
-      cout << "\n\nInstructions baad mai add karoon ga mai\n\n";
+      chessGame.instructions();
     } else if (choice == 4) {
       exit(0);
     } else {
