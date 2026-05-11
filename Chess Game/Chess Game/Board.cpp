@@ -174,7 +174,7 @@ bool Board::movePiece(int x1, int y1, int x2, int y2, bool whiteTurn) {
         return false;
     }
 
-    // Legal move — now delete captured piece
+    // Legal move ï¿½ now delete captured piece
     if (capturedPiece != nullptr) {
         delete capturedPiece;
     }
