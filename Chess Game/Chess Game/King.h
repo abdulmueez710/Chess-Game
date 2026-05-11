@@ -2,7 +2,7 @@
 #define KING_H
 #include "Piece.h"
 
-class Board;
+class Board; // REference of Board class
 
 class King : public Piece {
 public:
