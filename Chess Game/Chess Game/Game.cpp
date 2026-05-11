@@ -9,7 +9,7 @@ Game::Game() : whiteTurn(true) {}
 void Game::startGame() { board.initialize(); }
 
 void Game::Menu(){
-  cout << "1.  Start New Game\n";
+  cout << "\n1.  Start New Game\n";
   cout << "2.  Resume Previous Game\n";
   cout << "3.  Rules and Instructions\n";
   cout << "4.  Quit\n";
@@ -55,12 +55,16 @@ void Game::takeInput() {
 
   if (board.movePiece(Row1, Column1, Row2, Column2, whiteTurn)) {
     switchTurn(); // Switch turn only if the move was successful
-    if (board.isInCheck(whiteTurn))
-        if (board.isCheckmate(whiteTurn))
+    if (board.isInCheck(whiteTurn)){
+        if (board.isCheckmate(whiteTurn)){
             cout << "Checkmate! " << (whiteTurn ? "Black" : "White") << " wins\n";
-        else
+        }
+        else{
             cout << (whiteTurn ? "White" : "Black") << " is in check!\n";
-  } else {
+        }
+    }
+  } 
+  else {
     cout << "Invalid move. Try again." << endl;
   }
 }

@@ -9,7 +9,7 @@ int main() {
   chessGame.Menu();
   int choice;
   do {
-    cout << "Enter your Choice : ";
+    cout << "\nEnter your Choice : ";
     cin >> choice;
     if (choice == 1) {
       chessGame.startGame();
