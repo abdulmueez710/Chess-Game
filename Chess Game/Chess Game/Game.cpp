@@ -64,8 +64,7 @@ cout << "   - Move opponent's piece\n";
 cout << "   - Capture your own piece\n";
 cout << "   - Leave your king in check\n\n";
 
-cout << "7. To quit the game at any time, type:\n";
-cout << "      quit\n\n";
+cout << "7. To quit the game at any time type: Quit / quit / q / Q ";
 
 cout << "8. Game End Conditions:\n";
 cout << "   - Checkmate  -> One player wins\n";
