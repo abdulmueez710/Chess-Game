@@ -72,14 +72,9 @@ void Board::initialize() {
 }
 void Board::display() {
     // 1. Column Labels 
-    cout << "     "; // Offset for row numbers
+    cout << "    "; // Offset for row numbers
     for (int j = 0; j < 8; j++) {
-        if(j == 0){
-          cout << " " << char(j + 97) << " ";
-        }
-        else{
           cout << "  " << char(j + 97) << " ";
-        }
     } 
     cout << "\n";
 
